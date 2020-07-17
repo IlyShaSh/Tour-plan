@@ -1,13 +1,33 @@
-.header
+.navbar
   background-color: #ffffff
   &-top
     display: flex
     align-items: center
     justify-content: space-between
     padding: 40px 0
+    &__menu-button
+      display: none
   &__search
     margin-left: 108px
     margin-right: auto
+  &-bottom
+    background-color: $dark
+  &-menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    list-style-type: none
+    margin: 0
+    padding: 31px 0
+    color: $light
+    &__link
+      color: inherit
+      text-decoration: none
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 18px
+.logo
+  width: 177px
 .search
   display: flex
   position: relative
@@ -17,12 +37,12 @@
   &__input
     width: 350px
     height: 100%
-    background: #F5FAFE;
-    border-radius: 6px;
+    background: #F5FAFE
+    border-radius: 6px
     border: none
     outline: none
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 12px
+    line-height: 15px
     padding-left: 23px
     padding-right: 75px
     color: $text-color
@@ -34,7 +54,7 @@
     width: 65px
     border: none
     outline: none
-    background-color: $primary;
+    background-color: $primary
 .user
   display: flex
   align-items: center
