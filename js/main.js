@@ -12,3 +12,13 @@ var mySwiper = new Swiper('.swiper-container', {
     pageUpDown: true,
   },
 });
+
+ymaps.ready(init);
+
+function init() {
+  // Создание карты.
+  var myMap = new ymaps.Map("map", {
+    center: [7.47302614, 80],
+    zoom: 10
+  });
+}
