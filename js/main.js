@@ -36,6 +36,7 @@ function init() {
 }
 
 $('.parallax-window').parallax({
+  imageSrc: '../img/newsletter-bg.jpg',
   speed: 0.5,
   zIndex: -100,
   androidFix: false,
