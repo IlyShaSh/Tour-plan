@@ -1,10 +1,22 @@
-var mySwiper = new Swiper('.swiper-container', {
-  // Optional parameters
+var hotelSlider = new Swiper('.hotel-slider', {
   loop: true,
-  // Navigation arrows
   navigation: {
-    nextEl: '.slider-button--next',
-    prevEl: '.slider-button--prev',
+    nextEl: '.hotel-slider__button--next',
+    prevEl: '.hotel-slider__button--prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+    pageUpDown: true,
+  },
+  effect: "coverflow"
+});
+
+var reviewsSlider = new Swiper('.reviews-slider', {
+  loop: true,
+  navigation: {
+    nextEl: '.reviews-slider__button--next',
+    prevEl: '.reviews-slider__button--prev',
   },
   keyboard: {
     enabled: true,
@@ -22,3 +34,9 @@ function init() {
     zoom: 10
   });
 }
+
+$('.parallax-window').parallax({
+  speed: 0.5,
+  zIndex: -100,
+  androidFix: false,
+});
