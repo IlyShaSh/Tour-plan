@@ -811,6 +811,171 @@ template {
   overflow: hidden;
 }
 
+.packages {
+  padding: 40px 0 70px 0;
+}
+
+.packages__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.packages-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 500px 500px;
+      grid-template-rows: 500px 500px;
+  -ms-grid-columns: 350px 350px 350px;
+      grid-template-columns: 350px 350px 350px;
+  /** grid-template-areas: "trip-card__item--1 trip-card__item--2" ". trip-card__item--3 trip-card__item--4 trip-card__item--5 ." **/
+}
+
+.trip-card__item--1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.trip-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.trip-card__image-block {
+  width: 350px;
+  height: 250px;
+  border-radius: 8px 8px 0px 0px;
+  overflow: hidden;
+}
+
+.trip-card__offer {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  background-color: #EC1F46;
+  padding: 8px 12px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.trip-card__vertical-image-block {
+  position: relative;
+  width: 366px;
+  height: 500px;
+  border-radius: 8px 0px 0px 8px;
+  overflow: hidden;
+}
+
+.trip-card__vertical-description {
+  width: 364px;
+  height: 500px;
+  background-color: #0A223D;
+  border-radius: 0px 8px 8px 0px;
+  padding: 46px 21px 30px 43px;
+}
+
+.trip-card__description {
+  height: 250px;
+  padding: 30px 21px 25px 32px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: #0A223D;
+}
+
+.trip-card__rating {
+  margin-bottom: 6px;
+}
+
+.trip-card__name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.trip-card__text {
+  color: #ffffff;
+  margin: 27px 0 34px;
+}
+
+.trip-card__room {
+  margin-bottom: 37px;
+}
+
+.trip-card-room__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-weight: lighter;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 11px;
+  color: #ffffff;
+}
+
+.trip-card-room__description {
+  margin-left: 15px;
+}
+
+.trip-card__price--old {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.trip-card__price--new {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.trip-card__price-special {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trip-card__button {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  border: none;
+  color: #ffffff;
+  background-color: #EC1F46;
+  padding: 11px 27px;
+  border-radius: 4px;
+}
+
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
