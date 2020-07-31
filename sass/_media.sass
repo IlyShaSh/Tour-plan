@@ -114,6 +114,9 @@
       &-form
         grid-row: 4
         grid-column: span 5
+  .modal
+    &__dialog
+      padding: 33px 53px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -254,6 +257,9 @@
   .footer
     &__input
       flex-basis: 100%
+  .modal
+    &__dialog
+      width: 450px
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -374,4 +380,15 @@
       width: 100%
       margin-bottom: 10px
     &__button
+      order: 1
+  .modal
+    &__dialog
+      width: 90%
+      padding: 33px 23px
+    &__form
+      align-items: flex-start
+      flex-direction: column
+    &__info
+      display: block
+      margin-top: 10px
       order: 1
