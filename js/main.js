@@ -67,4 +67,10 @@ $(document).ready(function () {
     modalOverlay.removeClass('modal__overlay--visible');
     modalDialog.removeClass('modal__dialog--visible');
   };
+
+  $(document).keyup(function (e) {
+    if (e.key === "Escape") {
+      closeModal(event);
+    }
+  });
 });
