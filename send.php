@@ -4,6 +4,7 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
+
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
@@ -30,7 +31,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'bicyclestandard534@gmail.com'; // Логин на почте
-    $mail->Password   = 'ilya1906'; // Пароль на почте
+    $mail->Password   = 'ShuriginIlya534'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('bicyclestandard534@gmail.com', 'Ilya Shurygin'); // Адрес самой почты и имя отправителя
@@ -45,12 +46,12 @@ try {
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
-else {$result = "errror";}
+else {$result = "error";}
 
 } catch (Exception $e) {
-    $result = "eror";
+    $result = "error";
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: thankyou.html');

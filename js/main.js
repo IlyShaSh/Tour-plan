@@ -26,15 +26,15 @@ $(document).ready(function () {
     },
   });
 
-  ymaps.ready(init);
-
-  function init() {
+  /* function init() {
     // Создание карты.
     var myMap = new ymaps.Map("map", {
       center: [7.47302614, 80],
       zoom: 10
     });
   }
+
+  ymaps.ready(init); */
 
   $('.parallax-window').parallax({
     imageSrc: '../img/newsletter-bg.jpg',
