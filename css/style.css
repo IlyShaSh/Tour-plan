@@ -54,6 +54,14 @@ textarea {
   outline: none;
 }
 
+.invalid {
+  color: #EC1F46;
+}
+
+.green {
+  color: green;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1402,13 +1410,17 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1416,6 +1428,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+  margin-top: 15px;
 }
 
 .modal__form {
@@ -1568,6 +1581,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
@@ -1645,7 +1662,7 @@ template {
   .packages__vertical-description {
     padding: 36px 21px 30px 33px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1752,9 +1769,9 @@ template {
         grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
   }
-  .footer__input {
-    -ms-flex-preferred-size: 49%;
-        flex-basis: 49%;
+  .footer__input-group {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
   }
   .footer__logo {
     width: 160px;
@@ -1995,7 +2012,7 @@ template {
   .packages__button {
     padding: 8px 15px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
