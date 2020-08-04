@@ -201,8 +201,7 @@
           <div class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0046814309244!2d79.80141631459692!3d7.574466994537737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2c96110de8289%3A0x3fd7668bc2d85eb9!2sGrand%20Hilton%20Hotel!5e0!3m2!1sru!2sru!4v1595426622162!5m2!1sru!2sru"
-              width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-              tabindex="0">
+              width="100%" height="223" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
             </iframe>
             <!-- <iframe
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d453ef5628c2fad546c0f1c3de6b69a7424b8aabc4bcad73d8e9e244d7be81f&amp;source=constructor"
@@ -420,7 +419,7 @@
       </h2>
       <form action="send.php" method="POST" class="subscribe newsletter__search newsletter-form">
         <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
-        <button class="subscribe__button" type="submit">Send</button>
+        <button method="GET" class="subscribe__button" name="subscribe__button" type="submit">Send</button>
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
@@ -720,10 +719,10 @@
             </div>
             <div class="footer__input-group">
               <input type="tel" class="input footer__input phone" placeholder="+7 (999) 999-99-99*" name="phone"
-                required>
+                required minlength="10">
             </div>
             <textarea class="message footer__message" cols="30" placeholder="Message" name="message"></textarea>
-            <button class="button footer__button" type="submit">Send</button>
+            <button method="GET" class="button footer__button" name="footer__button" type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
         </div>
@@ -751,12 +750,13 @@
       <div class="modal__form">
         <h3 class="modal__title">Send us a feedback</h3>
         <form action="send.php" method="POST" class="modal__form form">
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required
-            minlength="2">
-          <input type="tel" class="input modal__input phone" placeholder="+7 (999) 999-99-99*" name="phone" required>
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2"
+            pattern="^[a-zA-Z]+$">
+          <input type="tel" class="input modal__input phone" placeholder="+7 (999) 999-99-99*" name="phone" required
+            minlength="10">
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" cols="30" placeholder="Message" name="message"></textarea>
-          <button class="button modal__button" type="submit">Send</button>
+          <button method="GET" class="button modal__button" name="modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
@@ -774,12 +774,13 @@
       <div class="modal__form">
         <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="modal__form form">
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required
-            minlength="2">
-          <input type="tel" class="input modal__input phone" placeholder="+7 (999) 999-99-99*" name="phone" required>
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2"
+            pattern="^[a-zA-Z]+$">
+          <input type="tel" class="input modal__input phone" placeholder="+7 (999) 999-99-99*" name="phone" required
+            minlength="10">
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" cols="30" placeholder="Message" name="message"></textarea>
-          <button class="button modal__button" type="submit">Send</button>
+          <button method="GET" class="button modal__button" name="modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>

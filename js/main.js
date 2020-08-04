@@ -74,9 +74,26 @@ $(document).ready(function () {
     }
   });
 
+
+  $.validator.addMethod("regex", function (value, element, regexpr) {
+    return regexpr.test(value);
+  }, "The name must contain only latin letters without spaces");
+
+
   // Обработка форм
   $(".form").each(function () {
     $(this).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+          regex: /^[a-zA-Z]+$/
+        },
+        email: {
+          required: true,
+          email: true
+        },
+      },
       errorClass: "invalid",
       messages: {
         name: {
@@ -86,9 +103,6 @@ $(document).ready(function () {
         email: {
           required: "We need your email address to contact you",
           email: "Your email address must be in the format of name@domain.com",
-        },
-        phone: {
-          required: "Phone is required",
         },
       },
     });
