@@ -4,8 +4,9 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-buuttonName = $_GET['name'];
-
+$buttonName = $_POST['name'];
+$valueName = $buttonName->getAttribute('name');
+echo $valueName;
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
@@ -13,7 +14,7 @@ $message = $_POST['message'];
 $email = $_POST['email'];
 
 // Формирование самого письма
-if (buuttonName == footer__button) {
+if (buttonName == "footer__button") {
     $title = "Новое обращение Best Tour Plan";
     $body = "
     <h2>Новое обращение</h2>
@@ -22,14 +23,14 @@ if (buuttonName == footer__button) {
     <b>Сообщение:</b><br>$message
     ";
 }
-else if (buuttonName == subscribe__button) {
+else if (buttonName == "subscribe__button") {
     $title = "Новое обращение Best Tour Plan";
     $body = "
     <h2>Новый пользователь подписался на вашу новостную расслыку!</h2>
     <b>Почта:</b><br>$email
     ";
 }
-else if (buuttonName == modal__button) {
+else if (buttonName == "modal__button") {
     $title = "Новое обращение Best Tour Plan";
     $body = "
     <h2>Новое обращение</h2>
@@ -75,7 +76,8 @@ else {$result = "error";}
 }
 
 // Отображение результата
-if (buuttonName == modal__button) || (buuttonName == footer__button):
+if (($buttonName == "modal__button") || ($buttonName == "footer__button")):
     header('Location: thankyou.html');
-else if (buuttonName == subscribe__button):
+else:
   header('Location: subscription.html');
+endif;

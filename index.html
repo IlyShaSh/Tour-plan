@@ -8,6 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/aos.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=5924625e-a7ce-4133-a578-1149435ad8fc&lang=ru_RU">
   </script>
   <!-- <script>
@@ -127,7 +128,7 @@
               <img src="img/Star.svg" alt="Star">
             </div>
             <h1 class="hotel-name hotel-info__name">Grand Hilton Hotel</h1>
-            <span class="offer hotel-info__offer">Flash Offer</span>
+            <span class="offer hotel-info__offer" data-aos="flip-left">Flash Offer</span>
           </div>
           <p class="hotel-description">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>
         </div>
@@ -225,7 +226,7 @@
         <div class="packages__item-1">
           <div class="packages__vertical-image-block">
             <img src="img/trip-image_1.jpg" alt="Hotel image" class="packages__image">
-            <span class="packages__vertical-offer">Flash Offer</span>
+            <span class="packages__vertical-offer" data-aos="zoom-out-down">Flash Offer</span>
           </div>
           <div class="packages__vertical-description">
             <div class="packages__rating">
@@ -273,7 +274,7 @@
         <div class="packages__item">
           <div class="packages__image-block">
             <img src="img/trip-image_2.jpg" alt="Hotel image" class="packages__image">
-            <span class="packages__offer">Flash Offer</span>
+            <span class="packages__offer" data-aos="zoom-out-down">Flash Offer</span>
           </div>
           <div class="packages__description">
             <span class="packages__name">LUX* Belle Mare</span>
@@ -307,7 +308,7 @@
         <div class="packages__item">
           <div class="packages__image-block">
             <img src="img/trip-image_3.jpg" alt="Hotel image" class="packages__image">
-            <span class="packages__offer">Flash Offer</span>
+            <span class="packages__offer" data-aos="zoom-out-down">Flash Offer</span>
           </div>
           <div class="packages__description">
             <span class="packages__name">White Palace</span>
@@ -341,7 +342,7 @@
         <div class="packages__item">
           <div class="packages__image-block">
             <img src="img/trip-image_4.jpg" alt="Hotel image" class="packages__image">
-            <span class="packages__offer">Flash Offer</span>
+            <span class="packages__offer" data-aos="zoom-out-down">Flash Offer</span>
           </div>
           <div class="packages__description">
             <span class="packages__name">Luxury Place</span>
@@ -375,7 +376,7 @@
         <div class="packages__item">
           <div class="packages__image-block">
             <img src="img/trip-image_5.jpg" alt="Hotel image" class="packages__image">
-            <span class="packages__offer">Flash Offer</span>
+            <span class="packages__offer" data-aos="zoom-out-down">Flash Offer</span>
           </div>
           <div class="packages__description">
             <span class="packages__name">Hotel Five Star</span>
@@ -419,7 +420,7 @@
       </h2>
       <form action="send.php" method="POST" class="subscribe newsletter__search newsletter-form">
         <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
-        <button method="GET" class="subscribe__button" name="subscribe__button" type="submit">Send</button>
+        <button class="subscribe__button" name="subscribe__button" type="submit">Send</button>
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
@@ -566,22 +567,22 @@
     <div class="container">
       <h2 class="activities-title">Other Activities</h2>
       <div class="activities-wrapper">
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="100">
           <img src="img/card_1.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">The curious corner of chamarel</h3>
           <button class="card__button">Book Now</button>
         </div>
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="200">
           <img src="img/card_2.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">Gymkhana club golf course</h3>
           <button class="card__button">Book Now</button>
         </div>
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
           <img src="img/card_3.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
           <button class="card__button">Book Now</button>
         </div>
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="400">
           <img src="img/card_4.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">The blue marine discovery quest</h3>
           <button class="card__button">Book Now</button>
@@ -722,7 +723,7 @@
                 required minlength="10">
             </div>
             <textarea class="message footer__message" cols="30" placeholder="Message" name="message"></textarea>
-            <button method="GET" class="button footer__button" name="footer__button" type="submit">Send</button>
+            <button class="button footer__button" name="footer__button" type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
         </div>
@@ -756,7 +757,7 @@
             minlength="10">
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" cols="30" placeholder="Message" name="message"></textarea>
-          <button method="GET" class="button modal__button" name="modal__button" type="submit">Send</button>
+          <button class="button modal__button" name="modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
@@ -780,7 +781,7 @@
             minlength="10">
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" cols="30" placeholder="Message" name="message"></textarea>
-          <button method="GET" class="button modal__button" name="modal__button" type="submit">Send</button>
+          <button class="button modal__button" name="modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
@@ -794,6 +795,7 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 
