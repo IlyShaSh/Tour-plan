@@ -74,6 +74,19 @@ $(document).ready(function () {
     }
   });
 
+  $(".newsletter-form").validate({
+    errorClass: "invalid-2",
+  });
+
+  $(document).ready(function () {
+    $('.phone').mask('+7 (999) 999-99-99', {
+      'translation': {
+        9: {
+          pattern: /[0-9]/
+        },
+      },
+    });
+  });
 
   $.validator.addMethod("regex", function (value, element, regexpr) {
     return regexpr.test(value);
@@ -93,6 +106,9 @@ $(document).ready(function () {
           required: true,
           email: true
         },
+        phone: {
+          minlength: 10
+        }
       },
       errorClass: "invalid",
       messages: {
@@ -108,13 +124,6 @@ $(document).ready(function () {
     });
   });
 
-  $(".newsletter-form").validate({
-    errorClass: "invalid",
-  });
-
-  $(document).ready(function () {
-    $('.phone').mask('+7 (999) 999-99-99');
-  });
 
   AOS.init();
 

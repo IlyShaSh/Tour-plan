@@ -21,7 +21,7 @@
     font-weight: 300
     font-size: 24px
     line-height: 30px
-    max-width: 245px
+    max-width: 250px
     word-break: break-word
     &__strong
       display: block
@@ -33,13 +33,18 @@
 .subscribe
   position: relative
   width: 350px
-  height: 55px
+  //height: 55px
+  height: 80px
+  top: 10px
   border-radius: 4px
   overflow: hidden
   &__input
     position: absolute
     width: 100%
-    height: 100%
+    //height: 100%
+    height: 55px
+    top: 0
+    border-radius: 4px
     padding-right: 75px
     padding-left: 33px
     outline: none
@@ -47,9 +52,11 @@
   &__button
     position: absolute
     right: 0
-    height: 100%
+    //height: 100%
+    height: 55px
     min-width: 65px
     border: none
+    border-radius: 0 4px 4px 0
     background-color: $primary
     color: $light
     cursor: pointer

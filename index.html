@@ -7,10 +7,10 @@
   <title>Best Tour Plan - Hotel Booking</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap"
-    rel="stylesheet">
+    rel="preload">
   <link rel="stylesheet" href="css/aos.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=5924625e-a7ce-4133-a578-1149435ad8fc&lang=ru_RU">
-  </script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=5924625e-a7ce-4133-a578-1149435ad8fc&lang=ru_RU">
+  </script> -->
   <!-- <script>
     ymaps.ready(init);
 
@@ -420,7 +420,7 @@
       </h2>
       <form action="send.php" method="POST" class="subscribe newsletter__search newsletter-form">
         <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
-        <button class="subscribe__button" name="subscribe__button" type="submit">Send</button>
+        <button class="subscribe__button" name="modal__button" value="subscribe__button" type="submit">Send</button>
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
@@ -570,22 +570,22 @@
         <div class="card activities__card" data-aos="fade-up" data-aos-delay="100">
           <img src="img/card_1.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">The curious corner of chamarel</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" data-href="#rating-modal" class="card__button">Book Now</button>
         </div>
         <div class="card activities__card" data-aos="fade-up" data-aos-delay="200">
           <img src="img/card_2.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">Gymkhana club golf course</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" data-href="#rating-modal" class="card__button">Book Now</button>
         </div>
         <div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
           <img src="img/card_3.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" data-href="#rating-modal" class="card__button">Book Now</button>
         </div>
         <div class="card activities__card" data-aos="fade-up" data-aos-delay="400">
           <img src="img/card_4.jpg" alt="Activiti card" class="card__image">
           <h3 class="card__title">The blue marine discovery quest</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" data-href="#rating-modal" class="card__button">Book Now</button>
         </div>
       </div>
       <!-- /.activities-wrapper -->
@@ -723,7 +723,8 @@
                 required minlength="10">
             </div>
             <textarea class="message footer__message" cols="30" placeholder="Message" name="message"></textarea>
-            <button class="button footer__button" name="footer__button" type="submit">Send</button>
+            <button class="button footer__button" name="modal__button" value="footer__button"
+              type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
         </div>
@@ -754,10 +755,10 @@
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2"
             pattern="^[a-zA-Z]+$">
           <input type="tel" class="input modal__input phone" placeholder="+7 (999) 999-99-99*" name="phone" required
-            minlength="10">
+            minlength="10" pattern="[0-9]">
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" cols="30" placeholder="Message" name="message"></textarea>
-          <button class="button modal__button" name="modal__button" type="submit">Send</button>
+          <button class="button modal__button" name="modal__button" value="modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
@@ -778,10 +779,10 @@
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2"
             pattern="^[a-zA-Z]+$">
           <input type="tel" class="input modal__input phone" placeholder="+7 (999) 999-99-99*" name="phone" required
-            minlength="10">
+            minlength="10" pattern="[0-9]">
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
           <textarea class="message modal__message" cols="30" placeholder="Message" name="message"></textarea>
-          <button class="button modal__button" name="modal__button" type="submit">Send</button>
+          <button class="button modal__button" name="modal__button" value="modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
