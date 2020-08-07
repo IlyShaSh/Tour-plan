@@ -7,7 +7,12 @@
   <title>Best Tour Plan - Hotel Booking</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap"
+    rel="preload" as="style">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap"
     rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,7 +20,7 @@
   <header class="navbar navbar--mobile_fixed">
     <div class="container">
       <div class="navbar-top">
-        <a href="#" class="logo">
+        <a href="https://ilyuxa.ru/Tour-plan/" class="logo">
           <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
         </a>
         <form action="#" class="search navbar__search navbar__search--mobile--hidden">
@@ -119,7 +124,9 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
-        <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo">
+        <a href="https://ilyuxa.ru/Tour-plan/" class="logo footer__logo">
+          <img src=" img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="footer__logo">
+        </a>
         <div class="footer__list footer__categories">
           <h3 class="footer__title">All Categories</h3>
           <ul class="footer__ul">
@@ -222,26 +229,39 @@
               <div class="footer__icon-wrapper">
                 <img class="footer__icon" src="img/telephone.svg" alt="Icon: telephone">
               </div>
-              Tel (business hours) : 269 1500 <br>
-              Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-              Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+              <div class="footer__connections">
+                <span>Tel (business hours) : <a href="tel:269 1500" class="footer__connection">269
+                    1500</a></span>
+                <span>Tel (hotline) Monday - Saturday: <a href="tel:269 1500" class="footer__connection">52-56-61-38</a>
+                  (08:00
+                  am – 20:00 pm)</span>
+                <span>Tel (hotline) Sunday: <a href="tel:269 1500" class="footer__connection">52-56-61-38</a> (08:00
+                  am – 14:00 pm)</span>
+              </div>
             </li>
             <li class="footer__item footer__item--mb-2">
               <div class="footer__icon-wrapper">
                 <img class="footer__icon" src="img/email.svg" alt="Icon: email">
               </div>
-              cherly.lawson@example.com
+              <a href="email:cherly.lawson@example.com" class="footer__connection">cherly.lawson@example.com</a>
             </li>
           </ul>
         </div>
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required
+                minlength="2">
+            </div>
+            <div class="footer__input-group">
+              <input type="tel" class="input footer__input phone" placeholder="+7 (999) 999-99-99*" name="phone"
+                required minlength="18">
+            </div>
             <textarea class="message footer__message" cols="30" placeholder="Message" name="message"></textarea>
-            <button class="button footer__button" type="submit">Send</button>
+            <button class="button footer__button" name="modal__button" value="footer__button"
+              type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
         </div>
@@ -259,6 +279,10 @@
     </div>
     <!-- /.container -->
   </footer>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

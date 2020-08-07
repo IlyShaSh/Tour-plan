@@ -120,6 +120,7 @@
   .modal
     &__dialog
       padding: 33px 53px
+      height: auto
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -267,6 +268,7 @@
   .modal
     &__dialog
       width: 450px
+      overflow: auto
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -394,6 +396,8 @@
     &__dialog
       width: 90%
       padding: 33px 23px
+      height: 542px
+      overflow: auto
     &__form
       align-items: center
       flex-direction: column
@@ -401,3 +405,32 @@
       display: block
       margin-top: 10px
       order: 1
+@media (max-height: 610px)
+  .modal
+    &__dialog
+      max-height: 592px
+      overflow: auto
+@media (max-height: 585px)
+  .modal
+    &__dialog
+      height: 520px
+      overflow: auto
+  .navbar
+    &-menu
+      height: 417px
+@media (max-height: 510px)
+  .navbar
+    &-menu
+      height: 400px
+@media (max-height: 480px)
+  .navbar
+    &-menu
+      height: 340px
+@media (max-height: 420px)
+  .navbar
+    &-menu
+      height: 310px
+@media (max-height: 390px)
+  .navbar
+    &-menu
+      height: 190px

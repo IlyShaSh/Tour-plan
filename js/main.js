@@ -26,16 +26,6 @@ $(document).ready(function () {
     },
   });
 
-  /* function init() {
-    // Создание карты.
-    var myMap = new ymaps.Map("map", {
-      center: [7.47302614, 80],
-      zoom: 10
-    });
-  }
-
-  ymaps.ready(init); */
-
   $('.parallax-window').parallax({
     imageSrc: '../img/newsletter-bg.jpg',
     speed: 0.5,
@@ -78,20 +68,9 @@ $(document).ready(function () {
     errorClass: "invalid-2",
   });
 
-  $(document).ready(function () {
-    $('.phone').mask('+7 (999) 999-99-99', {
-      'translation': {
-        9: {
-          pattern: /[0-9]/
-        },
-      },
-    });
-  });
-
   $.validator.addMethod("regex", function (value, element, regexpr) {
     return regexpr.test(value);
   }, "The name must contain only latin letters without spaces");
-
 
   // Обработка форм
   $(".form").each(function () {
@@ -106,9 +85,6 @@ $(document).ready(function () {
           required: true,
           email: true
         },
-        phone: {
-          minlength: 10
-        }
       },
       errorClass: "invalid",
       messages: {
@@ -120,11 +96,28 @@ $(document).ready(function () {
           required: "We need your email address to contact you",
           email: "Your email address must be in the format of name@domain.com",
         },
+        phone: {
+          minlength: "Please enter at least 10 characters."
+        },
       },
     });
   });
 
+  $(document).ready(function () {
+    $('.phone').mask('+7 (999) 999-99-99', {
+      'translation': {
+        9: {
+          pattern: /[0-9]/
+        },
+      },
+    });
+  });
 
   AOS.init();
 
+  $(".map").click(function () {
+    let map = $(".map");
+    map.append('<iframe class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0046814309244!2d79.80141631459692!3d7.574466994537737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x3ae2c96110de8289%3A0x3fd7668bc2d85eb9!2sGrand%20Hilton%20Hotel!5e0!3m2!1sru!2sru!4v1595426622162!5m2!1sru!2sru" aria-hidden="false" tabindex="0"></iframe>');
+    map.removeClass('map-google');
+  });
 });
